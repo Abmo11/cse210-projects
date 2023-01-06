@@ -12,7 +12,7 @@ class Program
         Console.Write("What is your last name? ");
         string lastName = Console.ReadLine();
 
-        // Adds a space in between the inputs and final output
+        // Formats a space between inputs and final output
         Console.WriteLine();
 
         // Displays name 007 style
