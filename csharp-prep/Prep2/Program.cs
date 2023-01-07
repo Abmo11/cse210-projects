@@ -34,7 +34,22 @@ class Program
             letter = "F";
         }
 
-        Console.WriteLine($"Your letter grade is {letter}");
+        // Determines positive or negative sign
+        string sign;
+        if ((grade < 97 && grade > 60) && grade % 10 >= 7)
+        {
+            sign = "+";
+        } // 100+ = remainders 0, 1, 2 gives a '-', grade>=100 corrects it
+        else if (grade >= 100 || grade % 10 >= 3)
+        {
+            sign = "";
+        }
+        else 
+        {
+            sign = "-";
+        }
+
+        Console.WriteLine($"Your letter grade is {sign}{letter}");
 
         // Determines if student passed the class
         if (grade >= 70)
