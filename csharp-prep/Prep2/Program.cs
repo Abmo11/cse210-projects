@@ -34,7 +34,7 @@ class Program
             letter = "F";
         }
 
-        Console.WriteLine(letter);
+        Console.WriteLine($"Your letter grade is {letter}");
 
         // Determines if student passed the class
         if (grade >= 70)
