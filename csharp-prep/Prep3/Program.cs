@@ -4,33 +4,23 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.Write("Please enter the magic number: ");
-        string input = Console.ReadLine();
-        int magic = int.Parse(input);
-
-        Console.Write("Please enter your guess: ");
-        string inputTwo = Console.ReadLine();
-        int magicGuess = int.Parse(inputTwo);
+        // Restructured code to include a single do-while loop
+        // instead of 2 loops. Also found cleaner way
+        // to parse into ints from user input
 
 
-        if (magicGuess > magic)
-        {
-            Console.WriteLine("Lower");
-        }
-        else if (magicGuess == magic)
-        {
-            Console.WriteLine("You guessed it!");
-        }
-        else
-        {
-            Console.WriteLine("Higher");
-        }
+        // Creates a random number
+        Random randomGenerator = new Random();
+        int magic = randomGenerator.Next(1, 101);
 
-        while (magicGuess != magic)
+        // Variable for input
+        int magicGuess;
+
+        do
         {
-            Console.Write("Please enter another guess: ");
-            string inputThree = Console.ReadLine();
-            magicGuess = int.Parse(inputThree);
+            // Input parsed into an int
+            Console.Write("Please enter your guess: ");
+            magicGuess = int.Parse(Console.ReadLine());
 
             if (magicGuess > magic)
             {
@@ -43,7 +33,7 @@ class Program
             else
             {
                 Console.WriteLine("Higher");
-            }
-        }
+            } 
+        } while (magicGuess != magic); // Continues running until the number is guessed
     }
 }
