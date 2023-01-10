@@ -5,8 +5,8 @@ class Program
     static void Main(string[] args)
     {
         // Restructured code to include a single do-while loop
-        // instead of 2 loops. Also found cleaner way
-        // to parse into ints from user input
+        // to consolidate both if blocks. Also found cleaner way
+        // to parse into ints from user input.
 
 
         // Creates a random number
